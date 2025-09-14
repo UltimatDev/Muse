@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Visualiser</title>
+    <style>
+    
+      
+  body {
+    margin: 0;
+    background: radial-gradient(circle at center, #0f0f0f, #000000);
+    overflow: hidden;
+    font-family: "Orbitron", sans-serif;
+  }
+
+  canvas {
+    display: block;
+    width: 100%;
+    height: 100vh;
+  }
+
+  #title {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #0ff;
+    font-size: 24px;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+    letter-spacing: 2px;
+  }
+</style>
+
+
+</head>
+<body>
+    <h1 id="title">Muse</h1>
+    <form id="uploadForm">
+        <input type="file" name="file" accept="audio/*" />
+        <button type="submit">Upload & Play</button>
+    </form>
+    <audio id="player" controls></audio>
+    <canvas id="visualiser"></canvas>
+    <script src="/static/script.js"></script>
+</body>
+</html>
